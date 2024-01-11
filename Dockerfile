@@ -12,7 +12,7 @@ RUN npm run build
 FROM nginx:stable-alpine
 
 # copy the nginx configuration
-# COPY --from=build /app/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /app/nginx.conf /etc/nginx/nginx.conf
 
 # Remove the default Nginx website that comes with the image
 RUN rm -rf /usr/share/nginx/html/*
