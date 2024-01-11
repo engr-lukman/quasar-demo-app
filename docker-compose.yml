@@ -8,7 +8,7 @@ services:
     container_name: quasar-demo-app
     restart: always
     ports:
-      - "8080:80"
+      - "80:80"
 networks:
   default:
     external: false
