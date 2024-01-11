@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  quasar-app:
+    image: quasar-demo-app:latest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: quasar-demo-app
+    restart: always
+    ports:
+      - "3005:3005"
+networks:
+  default:
+    external: false
+    name: quasar-demo-app
