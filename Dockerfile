@@ -1,7 +1,7 @@
 FROM node:18-alpine AS build
 RUN npm i -g pnpm
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 RUN pnpm install
 COPY . .
 
