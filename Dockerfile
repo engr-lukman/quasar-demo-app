@@ -22,7 +22,7 @@ RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist/spa/ /usr/share/nginx/html/
 
 
-EXPOSE 6000
+EXPOSE 3000
 
 # start nginx
 CMD ["nginx", "-g", "daemon off;"]
